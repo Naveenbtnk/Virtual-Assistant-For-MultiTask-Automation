@@ -1,0 +1,479 @@
+{
+  "intents": [
+    {
+      "tag": "institution_vision",
+      "patterns": ["What is the vision of the institution?", "Vision of the institution"],
+      "responses": [
+        "Be a leading multidisciplinary University, producing world-class talents to address global challenges."
+      ]
+    },
+    {
+      "tag": "institution_mission",
+      "patterns": ["What is the mission of the institution?", "Mission of the institution"],
+      "responses": [
+        "To attain excellence in Education and Research through effective collaboration with Industries and other International/National organisations.",
+        "To consistently remain an attractive ecosystem for students and employees, a hub of innovation for researchers and an incubating platform for entrepreneurs.",
+        "To create an inclusive environment that caters to all forms of diversity.",
+        "To engage in outreach and community development activities, creating an impact on society."
+      ]
+    },
+    {
+      "tag": "list_of_schools",
+      "patterns": ["What are the schools in the institution?", "List of schools"],
+      "responses": [
+        "1.School of Computing Sathyabama. 2.School of Computing. 3.School of Science & Humanities 4. School of Electrical and Electronics 5.School of Law 6. School of Mechanical 7. School of Pharmacy 8. School of Bio and Chemical Engineering 9. School of Nursing 10. School of Building and Environment 11. School of Paramedical Sciences 12. School of Dental Sciences 13. School of Management Studies 14. School of Allied Health Sciences "]
+    },
+    {
+      "tag": "ug_course_regulations",
+      "patterns": ["What are the UG course regulations?", "Undergraduate course regulations"],
+      "responses": [
+        "Effective from the academic year 2015-2016 and applicable to the students admitted to the Undergraduate Courses.",
+        "Every Programme will have a curriculum with syllabus consisting of Theory and practical courses including core courses, elective courses, workshops, and project work.",
+        "The duration of the program is typically 8 semesters for B.E./B.Tech, 6 semesters for B.Sc., and 2 semesters for B.Ed.",
+        "A student must secure at least 90% attendance to be allowed to write the semester exams.",
+        "The degree classifications are based on overall percentage secured after completing the degree."
+      ]
+    },
+    {
+      "tag": "remote_access_library",
+      "patterns": ["How can I access the library remotely?", "Remote library access"],
+      "responses": [
+        "You can access the Central Library's e-resources remotely at https://sist.knimbus.com/",
+        "Use your mail ID as the username and 'user@knimbus' as the password to login.",
+        "The mLibrary app also provides access to subscribed e-resources and other academic content."
+      ]
+    },
+    {
+      "tag": "e_resources_access",
+      "patterns": ["What e-resources are available?", "What are the online databases available?"],
+      "responses": [
+        "We provide access to various e-resources including IEEE E-journals, ELSEVIER E-journals, ACM Digital Library, Web of Science, and ProQuest.",
+        "Students can also access a wide range of e-books and e-journals through platforms like NPTEL and DELNET."
+      ]
+    },
+    {
+      "tag": "students_with_special_needs",
+      "patterns": ["How does the library assist students with special needs?", "Library access for students with disabilities"],
+      "responses": [
+        "Sathyabama ensures that students with disabilities have equal access to library resources.",
+        "Students with disabilities receive extra care, including remote access, extended reserve periods, late fine waivers, and the option to have books sent by mail."
+      ]
+    },
+    {
+      "tag": "library_facilities",
+      "patterns": ["What facilities are available in the library?", "Library facilities"],
+      "responses": [
+        "The library is open from 8.00 A.M. to 10.00 P.M. every working day.",
+        "It offers advanced search facilities, Wi-Fi, e-learning facilities, and a collection of print journals, magazines, rare books, and more."
+      ]
+    },
+    {
+      "tag": "competitive_exam_preparation",
+      "patterns": ["How can I prepare for competitive exams?", "Resources for GATE, TOEFL, GMAT, IELTS"],
+      "responses": [
+        "The library has an extensive collection of materials to support preparation for competitive exams like GATE, TOEFL, GMAT, and IELTS.",
+        "Books, CDs, and study guides for these exams are available at the Advisory Bureau for Higher Studies."
+      ]
+    },
+    {
+      "tag": "library_support_for_communication_skills",
+      "patterns": ["Does the library provide support for communication skills?", "How can I improve my communication skills?"],
+      "responses": [
+        "Yes, the library offers an exhaustive collection of educative CDs aimed at improving communication skills.",
+        "There is also support for foreign language coaching and training for competitive examinations."
+      ]
+    },
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Good morning", "Good evening", "Hey", "How are you?", "Good day"],
+      "responses": ["Hello! How can I assist you today?", "Hi! How can I help you?", "Greetings! How can I assist you?"]
+    },
+    {
+      "tag": "admissions",
+      "patterns": ["How can I apply for admission?", "What is the admission process?", "Tell me about the admission procedure", "When do admissions start?", "What is the eligibility for admission?"],
+      "responses": [
+        "You can apply for admission online through our official website. The admission process includes filling out an application form and providing required documents.",
+        "The admission starts in April and ends in June. You need to submit the application form along with supporting documents for verification."
+      ]
+    },
+    {
+      "tag": "courses_offered",
+      "patterns": ["What courses are offered?", "Which courses are available?", "Tell me about the courses", "What programs do you offer?"],
+      "responses": [
+        "We offer a variety of undergraduate, postgraduate, and diploma programs across multiple disciplines including Engineering, Arts, Commerce, and more.",
+        "For detailed information, please visit our courses section on the official website."
+      ]
+    },
+    {
+      "tag": "faculty_information",
+      "patterns": ["Who are the faculty members?", "Tell me about the faculty", "Who teaches here?", "Faculty information"],
+      "responses": [
+        "Our faculty members are highly qualified and experienced professionals in their respective fields. For a detailed list of faculty, please visit the faculty section on our website."
+      ]
+    },
+    {
+      "tag": "campus_facilities",
+      "patterns": ["What facilities are available on campus?", "Tell me about the campus facilities", "What are the campus facilities?", "Is there a library on campus?", "What sports facilities do you have?"],
+      "responses": [
+        "We offer state-of-the-art facilities including a well-stocked library, sports complex, modern classrooms, and labs, along with hostels, cafeterias, and recreational areas."
+      ]
+    },
+    {
+      "tag": "library",
+      "patterns": ["How can I access the library?", "What are the library timings?", "Tell me about the library", "Is the library open on weekends?", "How can I borrow books?"],
+      "responses": [
+        "Our library is open from 8:00 AM to 10:00 PM. You can borrow books by showing your student ID. We also have e-resources available for online access.",
+        "You can access the library’s digital resources remotely using your student login credentials."
+      ]
+    },
+    {
+      "tag": "exams",
+      "patterns": ["When are the exams?", "Tell me about the exam schedule", "When do I get the exam timetable?", "How do I check my exam results?", "What is the exam format?"],
+      "responses": [
+        "Exams are generally held at the end of each semester. You can check the timetable on the official website or through the student portal.",
+        "For detailed information on exam schedules and results, please visit the exam section on the website."
+      ]
+    },
+    {
+      "tag": "fees",
+      "patterns": ["What is the fee structure?", "How much is the fee?", "Tell me about the tuition fees", "What are the payment options?"],
+      "responses": [
+        "The fee structure depends on the course you choose. You can find the detailed fee structure on the admissions page of our website.",
+        "We offer multiple payment methods, including online payments and bank transfers."
+      ]
+    },
+    {
+      "tag": "student_support",
+      "patterns": ["Is there any student support?", "What student services are available?", "Do you provide counseling for students?", "What support is available for students?"],
+      "responses": [
+        "Yes, we offer various student support services including academic counseling, mental health support, career services, and extracurricular activities to enhance student life."
+      ]
+    },
+    {
+      "tag": "events",
+      "patterns": ["What events are happening on campus?", "Tell me about campus events", "Are there any upcoming events?", "What events do you have?"],
+      "responses": [
+        "We regularly organize cultural, academic, and sports events on campus. For updates on upcoming events, please check our events calendar on the website."
+      ]
+    },
+    {
+      "tag": "placement",
+      "patterns": ["Does the college offer placements?", "Tell me about the placement process", "What are the placement opportunities?", "How does the college help with placements?"],
+      "responses": [
+        "Yes, we have an active placement cell that helps students secure internships and jobs with top companies. Placement drives are organized at the end of each academic year."
+      ]
+    },
+    {
+      "tag": "hostels",
+      "patterns": ["Is there a hostel facility?", "Tell me about the hostels", "How can I apply for a hostel?", "What is the hostel fee?"],
+      "responses": [
+        "Yes, we have hostel facilities for both male and female students. You can apply for a hostel by filling out the application form during the admission process."
+      ]
+    },
+    {
+      "tag": "contact_information",
+      "patterns": ["How can I contact the college?", "What is the contact number?", "How do I get in touch with the administration?", "What is the address of the college?"],
+      "responses": [
+        "You can contact us through our official website or by calling our helpline number. The address and other contact details are available on the contact page of our website."
+      ]
+    },
+    {
+      "tag": "course_duration",
+      "patterns": ["How long is the course?", "What is the duration of the program?", "Tell me about the course duration", "How many years does the course take?"],
+      "responses": [
+        "The duration of the courses varies depending on the program. Typically, undergraduate courses take 3 to 4 years, while postgraduate courses take 2 years."
+      ]
+    },
+    {
+      "tag": "scholarships",
+      "patterns": ["Are there any scholarships available?", "What scholarships do you offer?", "How can I apply for a scholarship?", "Do you offer financial aid?"],
+      "responses": [
+        "We offer a variety of scholarships based on merit and financial need. For more details, please visit the scholarships section of our website."
+      ]
+    },
+    {
+      "tag": "campus_tour",
+      "patterns": ["Can I get a campus tour?", "How can I visit the campus?", "Tell me about the campus tour", "Is a campus tour available?"],
+      "responses": [
+        "Yes, we offer guided campus tours for prospective students. You can book a tour through our website or contact the admissions office."
+      ]
+    },
+     {
+      "tag": "general_inquiry",
+      "patterns": ["What is the university's history?", "Tell me about the university", "Where is the college located?"],
+      "responses": [
+        "Our university was established in [Year] with the vision of creating world-class professionals.",
+        "The campus is located in [City, Country], offering a diverse and vibrant academic environment."
+      ]
+    },
+    {
+      "tag": "student_life",
+      "patterns": ["What is student life like?", "Tell me about campus life", "Is there a student club?"],
+      "responses": [
+        "Student life at our university is vibrant with numerous clubs and societies. We have clubs for arts, sports, science, technology, and more.",
+        "Students regularly participate in cultural, technical, and sports events, and there's always something happening on campus."
+      ]
+    },
+    {
+      "tag": "extracurricular_activities",
+      "patterns": ["What extracurricular activities can I participate in?", "Are there any student clubs?", "What are the clubs and events available for students?"],
+      "responses": [
+        "We have a wide range of extracurricular activities including sports, drama, dance, music, debate, coding competitions, and more.",
+        "You can also participate in leadership programs, workshops, and community service activities."
+      ]
+    },
+    {
+      "tag": "student_counseling",
+      "patterns": ["Is there counseling available for students?", "Do you have student mental health services?", "Where can I get help for stress or anxiety?"],
+      "responses": [
+        "Yes, we offer student counseling services to support mental health and personal well-being. Our trained counselors are available to help students with stress, anxiety, and personal concerns.",
+        "Counseling is confidential and available to all students throughout the academic year."
+      ]
+    },
+    {
+      "tag": "library_resources",
+      "patterns": ["What resources are available in the library?", "How can I use the library?", "Tell me about library facilities"],
+      "responses": [
+        "Our library provides access to thousands of physical books, journals, e-books, research papers, and online databases.",
+        "We also provide study areas, research assistance, and computers for students. Library services can be accessed both physically and remotely."
+      ]
+    },
+    {
+      "tag": "online_courses",
+      "patterns": ["Are there online courses?", "Can I take courses online?", "Do you offer distance learning programs?"],
+      "responses": [
+        "Yes, we offer several online courses, including MOOCs (Massive Open Online Courses) and programs through platforms like SWAYAM, Coursera, and edX.",
+        "Students can also access recorded lectures and digital resources through the university portal."
+      ]
+    },
+    {
+      "tag": "faculty_availability",
+      "patterns": ["How can I contact a faculty member?", "Are the faculty available for consultation?", "How can I reach my professor?"],
+      "responses": [
+        "You can contact faculty members through the university's email system or via the student portal.",
+        "Faculty office hours are available each week, and students are encouraged to schedule appointments or attend their office hours for consultation."
+      ]
+    },
+    {
+      "tag": "alumni_network",
+      "patterns": ["Is there an alumni network?", "How can I contact alumni?", "What is the alumni network for?"],
+      "responses": [
+        "Our alumni network is strong and provides a platform for former students to stay connected with the university, support current students, and network with peers.",
+        "We organize regular alumni events and offer mentorship programs for students to connect with professionals."
+      ]
+    },
+    {
+      "tag": "internships",
+      "patterns": ["Are internships available?", "How can I apply for internships?", "Do you have a placement office?"],
+      "responses": [
+        "We have a dedicated internship placement cell that helps students secure internships with leading companies across various industries.",
+        "You can apply for internships through the student portal, and we organize campus recruitment drives and internship fairs each year."
+      ]
+    },
+    {
+      "tag": "student_exchange_programs",
+      "patterns": ["Do you have student exchange programs?", "Can I study abroad?", "Tell me about exchange programs"],
+      "responses": [
+        "Yes, we have several student exchange programs with universities worldwide. These programs allow students to study abroad and experience different cultures and educational systems.",
+        "You can apply for the exchange programs during your second year of study through the International Relations Office."
+      ]
+    },
+    {
+      "tag": "career_services",
+      "patterns": ["What career services are available?", "How does the college help with job placements?", "Do you have career counseling?"],
+      "responses": [
+        "Our Career Services Department offers resume building workshops, job fairs, internships, career counseling, and interview preparation.",
+        "We also offer placement drives where top companies come to recruit our students for internships and full-time jobs."
+      ]
+    },
+    {
+      "tag": "course_structure",
+      "patterns": ["Tell me about the course structure", "How is the course structured?", "What subjects are taught in the program?"],
+      "responses": [
+        "Each program has a combination of core subjects, elective subjects, workshops, industrial training, and a final project.",
+        "The course is designed to provide theoretical knowledge along with practical skills to help students excel in their chosen field."
+      ]
+    },
+    {
+      "tag": "student_feedback",
+      "patterns": ["Can I provide feedback?", "How can I give feedback on courses?", "Where can I share my thoughts on the university?"],
+      "responses": [
+        "Yes, we value student feedback and encourage you to share your thoughts through the student portal or during the annual feedback surveys.",
+        "Your feedback helps us improve our services and academic offerings."
+      ]
+    },
+    {
+      "tag": "scholarships_availability",
+      "patterns": ["Do you offer scholarships?", "How can I apply for a scholarship?", "Are there any merit-based scholarships?"],
+      "responses": [
+        "Yes, we offer a variety of scholarships based on merit, financial need, and specific categories. You can apply for scholarships through the admissions process.",
+        "For more details, visit the scholarships page on our website."
+      ]
+    },
+    {
+      "tag": "sports_facilities",
+      "patterns": ["Are there sports facilities?", "What sports can I play?", "Tell me about the sports complex"],
+      "responses": [
+        "Our campus has a full range of sports facilities including basketball courts, football fields, a swimming pool, and a gymnasium.",
+        "We also organize inter-college sports events and encourage students to participate in various games."
+      ]
+    },
+    {
+      "tag": "faculty_qualifications",
+      "patterns": ["What qualifications do the faculty members have?", "Tell me about the qualifications of your professors", "Are your faculty members highly qualified?"],
+      "responses": [
+        "Our faculty members hold advanced degrees (Masters and PhDs) from prestigious institutions and have extensive experience in both academia and industry.",
+        "Many of our professors have research publications and are experts in their fields."
+      ]
+    },
+    {
+      "tag": "university_ranking",
+      "patterns": ["What is the university ranking?", "How is the university ranked?", "Tell me about the university's rank"],
+      "responses": [
+        "Our university is ranked among the top institutions in the country and is recognized globally for its excellence in education, research, and innovation.",
+        "For detailed rankings, you can refer to our website or international ranking platforms like QS and THE."
+      ]
+    },
+    {
+      "tag": "accommodation",
+      "patterns": ["Is there accommodation available?", "How can I apply for accommodation?", "Do you have hostels for students?"],
+      "responses": [
+        "Yes, we have on-campus hostel facilities for both male and female students. You can apply for accommodation during the admission process.",
+        "The hostels are well-equipped with necessary amenities to ensure a comfortable stay."
+      ]
+    },
+        {
+      "tag": "undergraduate_programs",
+      "patterns": ["What are the undergraduate programs?", "List of undergraduate programs", "What courses are offered at the undergraduate level?"],
+      "responses": [
+        "The undergraduate programs offered include: B.Tech, B.Arch, B.Des, B.Sc, B.Com, BBA, and BCA."
+      ]
+    },
+    {
+      "tag": "postgraduate_programs",
+      "patterns": ["What are the postgraduate programs?", "List of postgraduate programs", "What courses are offered at the postgraduate level?"],
+      "responses": [
+        "The postgraduate programs offered include: M.Tech, M.Arch, M.Sc, M.Com, MBA, MCA, and M.Phil."
+      ]
+    },
+    {
+      "tag": "research_programs",
+      "patterns": ["What are the research programs?", "List of research programs", "What research courses are available?"],
+      "responses": [
+        "The research programs include Ph.D. in various disciplines like Engineering, Science, and Management."
+      ]
+    },
+    {
+      "tag": "school_of_computing",
+      "patterns": ["What programs are offered in the School of Computing?", "List of programs in the School of Computing"],
+      "responses": [
+        "The School of Computing offers undergraduate and postgraduate programs like B.Tech in Computer Science, M.Tech in Software Engineering, and M.Sc in Data Science."
+      ]
+    },
+    {
+      "tag": "school_of_mechanical",
+      "patterns": ["What programs are offered in the School of Mechanical?", "List of programs in the School of Mechanical"],
+      "responses": [
+        "The School of Mechanical offers programs like B.Tech in Mechanical Engineering and M.Tech in Thermal Engineering."
+      ]
+    },
+    {
+      "tag": "school_of_pharmacy",
+      "patterns": ["What programs are offered in the School of Pharmacy?", "List of programs in the School of Pharmacy"],
+      "responses": [
+        "The School of Pharmacy offers programs like B.Pharm, M.Pharm, and Ph.D. in Pharmacy."
+      ]
+    },
+    {
+      "tag": "school_of_law",
+      "patterns": ["What programs are offered in the School of Law?", "List of programs in the School of Law"],
+      "responses": [
+        "The School of Law offers programs like 5-year Integrated B.A. LL.B, LL.M, and Ph.D. in Law."
+      ]
+    },
+    {
+      "tag": "school_of_management",
+      "patterns": ["What programs are offered in the School of Management?", "List of programs in the School of Management"],
+      "responses": [
+        "The School of Management offers MBA programs with specializations like Finance, Marketing, and Human Resources."
+      ]
+    },
+    {
+      "tag": "regulation",
+      "patterns": ["School of Computing regulation","regulation of school of computing"],
+      "responses": [
+        "Click <a href='https://sist.sathyabama.ac.in/syllabus2023/schoolWiseSyllabus.php?id=1&school=COMPUTING&shortname=soc&regularpt=regular' target='_blank'>here</a> to view the School of Computing regulation."
+      ]
+    },
+     {
+      "tag": "regulation",
+      "patterns": ["School of Computing regulation", "regulation of school of computing"],
+      "responses": [
+        "Click <a href='https://sist.sathyabama.ac.in/syllabus2023/schoolWiseSyllabus.php?id=1&school=COMPUTING&shortname=soc&regularpt=regular' target='_blank'>here</a> to view the School of Computing regulation."
+      ]
+    },
+    {
+      "tag": "school_of_electrical_and_electronics_engineering_regulation",
+      "patterns": ["School of Electrical and Electronics Engineering regulation", "regulation of school of Electrical and Electronics Engineering"],
+      "responses": [
+        "Click <a href='https://sist.sathyabama.ac.in/syllabus2023/schoolWiseSyllabus.php?id=2&school=ELECTRICAL%20AND%20ELECTRONICS%20ENGINEERING&shortname=soe&regularpt=regular' target='_blank'>here</a> to view the School of Electrical and Electronics Engineering regulation."
+      ]
+    },
+    {
+      "tag": "school_of_mechanical_engineering_regulation",
+      "patterns": ["School of Mechanical Engineering regulation", "regulation of school of Mechanical Engineering"],
+      "responses": [
+        "Click <a href='https://sist.sathyabama.ac.in/syllabus2023/schoolWiseSyllabus.php?id=3&school=MECHANICAL%20ENGINEERING&shortname=som&regularpt=regular' target='_blank'>here</a> to view the School of Mechanical Engineering regulation."
+      ]
+    },
+    {
+      "tag": "school_of_bio_and_chemical_engineering_regulation",
+      "patterns": ["School of Bio and Chemical Engineering regulation", "regulation of school of Bio and Chemical Engineering"],
+      "responses": [
+        "Click <a href='https://sist.sathyabama.ac.in/syllabus2023/schoolWiseSyllabus.php?id=4&school=BIO%20AND%20CHEMICAL%20ENGINEERING&shortname=sobc&regularpt=regular' target='_blank'>here</a> to view the School of Bio and Chemical Engineering regulation."
+      ]
+    },
+    {
+      "tag": "school_of_building_and_environment_regulation",
+      "patterns": ["School of Building and Environment regulation", "regulation of school of Building and Environment"],
+      "responses": [
+        "Click <a href='https://sist.sathyabama.ac.in/syllabus2023/schoolWiseSyllabus.php?id=5&school=BUILDING%20AND%20ENVIRONMENT&shortname=sobe&regularpt=regular' target='_blank'>here</a> to view the School of Building and Environment regulation."
+      ]
+    },
+    {
+      "tag": "school_of_management_studies_regulation",
+      "patterns": ["School of Management Studies regulation", "regulation of school of Management Studies"],
+      "responses": [
+        "Click <a href='https://sist.sathyabama.ac.in/syllabus2023/schoolWiseSyllabus.php?id=6&school=MANAGEMENT%20STUDIES&shortname=soms&regularpt=regular' target='_blank'>here</a> to view the School of Management Studies regulation."
+      ]
+    },
+    {
+      "tag": "school_of_science_and_humanities_regulation",
+      "patterns": ["School of Science and Humanities regulation", "regulation of school of Science and Humanities"],
+      "responses": [
+        "Click <a href='https://sist.sathyabama.ac.in/syllabus2023/schoolWiseSyllabus.php?id=7&school=SCIENCE%20AND%20HUMANITIES&shortname=sosh&regularpt=regular' target='_blank'>here</a> to view the School of Science and Humanities regulation."
+      ]
+    },
+    {
+      "tag": "school_of_law_regulation",
+      "patterns": ["School of Law regulation", "regulation of school of Law"],
+      "responses": [
+        "Click <a href='https://sist.sathyabama.ac.in/syllabus2023/schoolWiseSyllabus.php?id=9&school=LAW&shortname=sol&regularpt=regular' target='_blank'>here</a> to view the School of Law regulation."
+      ]
+    },
+    {
+      "tag": "school_of_allied_health_sciences_regulation",
+      "patterns": ["School of Allied Health Sciences regulation", "regulation of school of Allied Health Sciences"],
+      "responses": [
+        "Click <a href='https://sist.sathyabama.ac.in/syllabus2023/schoolWiseSyllabus.php?id=14&school=ALLIED%20HEALTH%20SCIENCES&shortname=soahs&regularpt=regular' target='_blank'>here</a> to view the School of Allied Health Sciences regulation."
+      ]
+    },
+    {
+      "tag": "school_of_physiotherapy_regulation",
+      "patterns": ["tcs course content"],
+      "responses": [
+        "Click <a href='https://drive.google.com/drive/folders/1YEA1M7p8pVuY096PDT9i8gy1UX7xKpvZ' target='_blank'>here</a> to view the School of Physiotherapy regulation."
+      ]
+    }
+  ]
+}

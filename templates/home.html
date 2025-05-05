@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarizer & Translator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1>Text Summarizer & Translator</h1>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <form method="POST" action="/">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                <label for="text">Enter the text</label>
+                <textarea class="form-control" id="text" name="text" rows="5" placeholder="Enter your text here" required>{{ form.text.data }}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="num_words">Number of Words in Summary</label>
+                <input type="number" class="form-control" id="num_words" name="num_words" placeholder="Enter word limit (e.g., 50)" required>
+            </div>
+            <div class="form-group">
+                <label for="language">Select Language</label>
+                <select class="form-control" id="language" name="language">
+                    {% for code, lang in form.language.choices %}
+                        <option value="{{ code }}" {% if form.language.data == code %}selected{% endif %}>
+                            {{ lang }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Summarize & Translate</button>
+        </form>
+
+        {% if summary %}
+        <h2>Summary:</h2>
+        <ul>
+            {% for sentence in summary %}
+                <li>{{ sentence }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if translated_text %}
+        <h2>Translated Summary:</h2>
+        <p>{{ translated_text }}</p>
+        {% endif %}
+
+        {% if audio_file %}
+        <h2>Listen to Translated Summary:</h2>
+        <audio controls>
+            <source src="{{ audio_file }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        {% endif %}
+
+        <!-- Chatbox -->
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <h4>Chat Support</h4>
+                </div>
+                <div class="chatbox__messages" id="chatboxMessages">
+                    <!-- Messages will be dynamically inserted here -->
+                </div>
+                <div class="chatbox__footer">
+                    <input type="text" placeholder="Write a message..." id="chatInput">
+                    <button class="chatbox__send--footer send__button">Send</button>
+                </div>
+            </div>
+            <button class="chatbox__button">
+                <img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" alt="Chat">
+            </button>
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot Popup</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  <style>
+    .chatbox {
+      width: 100%;
+      max-width: 400px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .chatbox__header, .chatbox__footer {
+      background: #007bff;
+      color: white;
+      padding: 10px;
+    }
+    .chatbox__messages {
+      padding: 10px;
+      max-height: 300px;
+      overflow-y: auto;
+      background: #f8f9fa;
+    }
+    .chatbox__footer input {
+      width: calc(100% - 100px);
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="chatbox">
+    <div class="chatbox__header">
+      <h5>Chat Support</h5>
+    </div>
+    <div class="chatbox__messages" id="chat-messages">
+      <!-- Chat messages will appear here -->
+    </div>
+    <div class="chatbox__footer">
+      <input type="text" id="chat-input" placeholder="Write a message...">
+      <button class="btn btn-light" id="send-btn">Send</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('send-btn').addEventListener('click', function() {
+      var inputField = document.getElementById('chat-input');
+      var message = inputField.value;
+      var chatMessages = document.getElementById('chat-messages');
+
+      // Append user's message
+      chatMessages.innerHTML += "<p><strong>You:</strong> " + message + "</p>";
+
+      // Send the message to the backend /predict endpoint
+      fetch("/predict", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ message: message })
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Append bot's response
+        chatMessages.innerHTML += "<p><strong>Bot:</strong> " + data.answer + "</p>";
+        inputField.value = "";
+      })
+      .catch(error => console.error("Error:", error));
+    });
+  </script>
+</body>
+</html>

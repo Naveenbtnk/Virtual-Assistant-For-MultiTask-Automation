@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Feature App</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  <style>
+    .feature-section {
+      padding: 40px 0;
+      text-align: center;
+    }
+    .feature-card {
+      transition: transform 0.3s ease-in-out;
+    }
+    .feature-card:hover {
+      transform: scale(1.05);
+    }
+    .banner {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+    }
+    footer {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 30px;
+    }
+    footer a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    /* Chatbot Modal Styles */
+    #chat-messages p {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="{{ url_for('index') }}">Multi-Feature App</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('summarization') }}">Summarization</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('speech_to_text_page') }}">Speech to Text</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('text_to_speech_page') }}">Text to Speech</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('email_page') }}">Email Automation</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Full-Width Banner Image -->
+  <img src="{{ url_for('static', filename='images/banner.jpg') }}" alt="AI-Powered Features" class="banner">
+
+  <!-- Feature Section -->
+  <div class="container feature-section">
+    <h2 class="mb-4">Explore Our Features</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card feature-card">
+          <img src="{{ url_for('static', filename='images/summarization.png') }}" class="card-img-top" alt="Summarization">
+          <div class="card-body">
+            <h5 class="card-title">Text Summarization</h5>
+            <p class="card-text">Summarize text and PDFs efficiently in multiple languages.</p>
+            <a href="{{ url_for('summarization') }}" class="btn btn-primary">Try Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card feature-card">
+          <img src="{{ url_for('static', filename='images/speech_to_text.png') }}" class="card-img-top" alt="Speech to Text">
+          <div class="card-body">
+            <h5 class="card-title">Speech to Text</h5>
+            <p class="card-text">Convert speech into text with real-time transcription.</p>
+            <a href="{{ url_for('speech_to_text_page') }}" class="btn btn-primary">Try Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card feature-card">
+          <img src="{{ url_for('static', filename='images/text_to_speech.png') }}" class="card-img-top" alt="Text to Speech">
+          <div class="card-body">
+            <h5 class="card-title">Text to Speech</h5>
+            <p class="card-text">Convert text into natural-sounding speech in multiple languages.</p>
+            <a href="{{ url_for('text_to_speech_page') }}" class="btn btn-primary">Try Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card feature-card">
+          <img src="{{ url_for('static', filename='images/email.png') }}" class="card-img-top" alt="Email Automation">
+          <div class="card-body">
+            <h5 class="card-title">Email Automation</h5>
+            <p class="card-text">Send automated emails effortlessly with personalized content.</p>
+            <a href="{{ url_for('email_page') }}" class="btn btn-primary">Try Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chatbot Popup Modal Trigger Button -->
+  <div class="fixed-bottom ml-3 mb-3">
+    <button class="btn btn-success" data-toggle="modal" data-target="#chatModal">Chat support</button>
+  </div>
+
+  <!-- Chatbot Modal -->
+  <div class="modal fade" id="chatModal" tabindex="-1" role="dialog" aria-labelledby="chatModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="chatModalLabel">Chat Support</h5>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Chat Messages -->
+          <div id="chat-messages" style="max-height:300px; overflow-y:auto; background:#f8f9fa; padding:10px;"></div>
+          <!-- Chat Input -->
+          <div class="input-group mt-2">
+            <input type="text" id="chat-input" class="form-control" placeholder="Write a message...">
+            <div class="input-group-append">
+              <button class="btn btn-primary" id="send-btn" type="button">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    {% block content %}{% endblock %}
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Multi-Feature App. All rights reserved.</p>
+    <p>Contact: <a href="mailto:support@multifeatureapp.com">support@multifeatureapp.com</a></p>
+    <p>Follow us:
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a> |
+      <a href="#">LinkedIn</a>
+    </p>
+  </footer>
+
+  <!-- Include jQuery and Bootstrap JS for Modal functionality -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    // Send message to the chatbot via AJAX when the "Send" button is clicked
+    document.getElementById('send-btn').addEventListener('click', function() {
+      var inputField = document.getElementById('chat-input');
+      var message = inputField.value;
+      var chatMessages = document.getElementById('chat-messages');
+
+      // Append user's message
+      chatMessages.innerHTML += "<p><strong>You:</strong> " + message + "</p>";
+
+      // Send the message to the backend /predict endpoint
+      fetch("/predict", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ message: message })
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Append bot's response
+        chatMessages.innerHTML += "<p><strong>Bot:</strong> " + data.answer + "</p>";
+        inputField.value = "";
+      })
+      .catch(error => console.error("Error:", error));
+    });
+  </script>
+</body>
+</html>

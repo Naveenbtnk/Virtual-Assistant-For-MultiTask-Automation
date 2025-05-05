@@ -1,0 +1,20 @@
+import asyncio
+
+def translate_text(text, target_language):
+    translator = Translator()
+    try:
+        # Run the async translate coroutine in a synchronous manner
+        translated = asyncio.run(translator.translate(text, dest=target_language))
+        return translated.text
+    except Exception as e:
+        return f"Translation Error: {str(e)}"
+
+
+import time
+
+def generate_audio(text, language='en'):
+    tts = gTTS(text=text, lang=language)
+    timestamp = int(time.time())
+    audio_file = f"static/audio_output_{timestamp}.mp3"
+    tts.save(audio_file)
+    return audio_file

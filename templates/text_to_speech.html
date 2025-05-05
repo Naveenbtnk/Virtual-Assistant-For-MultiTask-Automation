@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% block content %}
+
+<div class="container mt-4">
+    <h2>Text-to-Speech Converter</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label for="text">Enter Text:</label>
+            <textarea class="form-control" name="text" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Convert to Speech</button>
+    </form>
+
+    {% if audio_file %}
+    <h3>Listen to Speech:</h3>
+    <audio controls>
+        <source src="{{ audio_file }}" type="audio/mpeg">
+    </audio>
+    {% endif %}
+</div>
+
+{% endblock %}

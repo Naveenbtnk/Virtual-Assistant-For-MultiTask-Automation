@@ -1,0 +1,166 @@
+/* General Page Styles */
+body {
+    font-family: 'Nunito', sans-serif;
+    background: #f1f1f1;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: #581B98;
+    padding: 20px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+/* Footer always at the bottom */
+footer {
+    background: #581B98;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+    color: white;
+    text-align: center;
+    position: relative; /* Ensures it moves down when needed */
+    margin-top: auto; /* Pushes footer to the bottom when content is short */
+}
+/* General Page Styles */
+body {
+    font-family: 'Nunito', sans-serif;
+    background: #f1f1f1;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Chatbox Container */
+.chatbox {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Initially hidden chatbox */
+.chatbox__support {
+    display: none;
+    background: white;
+    width: 350px;
+    height: 450px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    flex-direction: column;
+}
+
+/* Chatbox Header */
+.chatbox__header {
+    background: #9C1DE7;
+    padding: 12px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Messages Container */
+.chatbox__messages {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background: #f9f9f9;
+    max-height: 350px;
+}
+
+/* Message Bubbles */
+.messages__item {
+    max-width: 75%;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+/* User Messages (Right Side) */
+.messages__item--operator {
+    background: #9C1DE7;
+    color: white;
+    align-self: flex-end;
+    text-align: right;
+    border-bottom-right-radius: 5px;
+}
+
+/* Chatbot Responses (Left Side) */
+.messages__item--visitor {
+    background: #E0E0E0;
+    align-self: flex-start;
+    text-align: left;
+    border-bottom-left-radius: 5px;
+}
+
+/* Chatbox Footer (Fixed at the Bottom) */
+.chatbox__footer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #eee;
+    border-top: 1px solid #ccc;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Input Field */
+.chatbox__footer input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+/* Send Button */
+.chatbox__send--footer {
+    background: #9C1DE7;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+/* Chatbox Button */
+.chatbox__button {
+    background: #9C1DE7;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+/* Chatbox Button Hover Effect */
+.chatbox__button:hover {
+    transform: scale(1.1);
+}
+
+/* Chatbox Icon */
+.chatbox__button img {
+    width: 30px;
+    height: 30px;
+}

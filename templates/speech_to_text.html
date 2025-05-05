@@ -1,0 +1,62 @@
+{% extends "index.html" %}
+{% block content %}
+
+<div class="container mt-4">
+    <h2>Live Speech-to-Text Converter</h2>
+
+    <button id="startRecording" class="btn btn-success">Start Recording</button>
+    <button id="stopRecording" class="btn btn-danger" disabled>Stop Recording</button>
+
+    <h3>Converted Text:</h3>
+    <p id="convertedText">Start speaking, and text will appear here...</p>
+
+</div>
+
+<script>
+    let recognition;
+    let isRecording = false;
+
+    if ("webkitSpeechRecognition" in window) {
+        recognition = new webkitSpeechRecognition(); // ✅ Using Web Speech API
+        recognition.continuous = true;
+        recognition.interimResults = true;  // ✅ Show live results
+        recognition.lang = "en-US"; // ✅ Change language if needed
+
+        recognition.onresult = (event) => {
+            let finalTranscript = "";
+            for (let i = event.resultIndex; i < event.results.length; i++) {
+                let transcript = event.results[i][0].transcript;
+                if (event.results[i].isFinal) {
+                    finalTranscript += transcript + " ";
+                }
+            }
+            document.getElementById("convertedText").innerText = finalTranscript;
+        };
+
+        recognition.onerror = (event) => {
+            console.error("Speech recognition error", event.error);
+        };
+    } else {
+        alert("Your browser does not support real-time speech recognition.");
+    }
+
+    document.getElementById("startRecording").addEventListener("click", () => {
+        if (!isRecording) {
+            recognition.start();
+            isRecording = true;
+            document.getElementById("startRecording").disabled = true;
+            document.getElementById("stopRecording").disabled = false;
+        }
+    });
+
+    document.getElementById("stopRecording").addEventListener("click", () => {
+        if (isRecording) {
+            recognition.stop();
+            isRecording = false;
+            document.getElementById("startRecording").disabled = false;
+            document.getElementById("stopRecording").disabled = true;
+        }
+    });
+</script>
+
+{% endblock %}
